@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,9 +29,33 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oi-oX-3hf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokelist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQI-us-BUr">
+                                        <rect key="frame" x="87.5" y="5" width="200" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Uym-Y9-WJe"/>
+                                            <constraint firstAttribute="width" constant="200" id="hpa-Uv-S2e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                        <color key="textColor" red="0.98431372640000003" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiI-g7-502">
+                                        <rect key="frame" x="332" y="30" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="1jk-ol-j3K"/>
+                                            <constraint firstAttribute="width" constant="35" id="OUD-zV-JX5"/>
+                                        </constraints>
+                                        <state key="normal" image="music"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.36068509615384614" green="0.66371111427692309" blue="0.7162853506746153" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yQI-us-BUr" secondAttribute="bottom" constant="5" id="71n-a4-zZl"/>
+                                    <constraint firstItem="yQI-us-BUr" firstAttribute="centerX" secondItem="4oi-oX-3hf" secondAttribute="centerX" id="Auv-Cl-vs0"/>
                                     <constraint firstAttribute="height" constant="70" id="M5k-D0-3io"/>
+                                    <constraint firstAttribute="trailing" secondItem="NiI-g7-502" secondAttribute="trailing" constant="8" id="OvP-2O-bcB"/>
+                                    <constraint firstAttribute="bottom" secondItem="NiI-g7-502" secondAttribute="bottom" constant="5" id="Z7w-Od-VGa"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Hd9-uL-ORs">
@@ -54,7 +83,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-7J-UUe">
+                                                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-7J-UUe">
                                                     <rect key="frame" x="8" y="8" width="89" height="76"/>
                                                     <color key="backgroundColor" red="0.95282547390000005" green="0.98205927979999996" blue="0.9712417176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -110,15 +139,17 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="aDj-v0-T5s" id="lh7-oM-SMc"/>
+                        <outlet property="musicBtnPressed" destination="NiI-g7-502" id="gb7-wB-wKn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="140" y="148.87556221889056"/>
         </scene>
     </scenes>
     <resources>
         <image name="100" width="120" height="120"/>
         <image name="background" width="500" height="281"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
