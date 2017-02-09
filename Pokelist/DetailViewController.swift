@@ -12,6 +12,20 @@ class DetailViewController: UIViewController {
     
     var  pokemon: Pokemon!
 
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var defenceLbl: UILabel!
+    @IBOutlet weak var heightLbl: UILabel!
+    @IBOutlet weak var iDLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var attackLbl: UILabel!
+    @IBOutlet weak var currentEvoImg: UIImageView!
+    @IBOutlet weak var nextEvoImg: UIImageView!
+    @IBOutlet weak var evoLbl: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,5 +42,8 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backBtn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

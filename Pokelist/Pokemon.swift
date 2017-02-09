@@ -12,6 +12,13 @@ import Foundation
 class Pokemon {
     private var _name: String!
     private var _pokemId: Int!
+    private var _type: String!
+    private var _defense: String!
+    private var _description: String!
+    private var _height: String!
+    private var _weignt: Int!
+    private var _baseAttack: Int!
+    private var nextEvo: String!
     
     var name: String {
         return _name

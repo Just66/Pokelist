@@ -182,6 +182,9 @@
                                             <constraint firstAttribute="width" constant="36" id="hxU-q0-c96"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="Zru-bZ-8dN" eventType="touchUpInside" id="KuQ-1W-4eo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3606850962" green="0.66371111429999996" blue="0.71628535069999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,6 +390,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-XD-kTW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Whm-wK-TgB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="17"/>
                                         <color key="textColor" red="0.98431372640000003" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -430,6 +436,20 @@
                             <constraint firstItem="g6d-mg-Wql" firstAttribute="leading" secondItem="Ebt-3p-ZHv" secondAttribute="leading" id="wEL-CD-RDt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="attackLbl" destination="RcA-1P-y7y" id="daU-JE-DZU"/>
+                        <outlet property="currentEvoImg" destination="DW5-BF-ml6" id="ngZ-WG-ewh"/>
+                        <outlet property="defenceLbl" destination="VP5-qD-eh5" id="9pF-OZ-6w3"/>
+                        <outlet property="descriptionLbl" destination="tA7-Eu-md9" id="k6g-DF-3xE"/>
+                        <outlet property="evoLbl" destination="Pgr-XD-kTW" id="a7s-VY-AQ7"/>
+                        <outlet property="heightLbl" destination="uVD-3j-LaG" id="oo5-vS-Zpv"/>
+                        <outlet property="iDLbl" destination="pjg-IB-hJV" id="8Dx-gK-dlm"/>
+                        <outlet property="mainImage" destination="Fk4-JQ-140" id="eke-eg-roV"/>
+                        <outlet property="nameLbl" destination="riK-nT-JIN" id="epZ-la-vI2"/>
+                        <outlet property="nextEvoImg" destination="x7H-tp-1lO" id="XgH-ZI-8LX"/>
+                        <outlet property="typeLbl" destination="dtY-eu-6WZ" id="lLW-cr-XW0"/>
+                        <outlet property="weightLbl" destination="yR9-3z-neG" id="l9R-vH-z05"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9y9-8h-R7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
