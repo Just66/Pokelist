@@ -29,19 +29,46 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setBaseParametrs()
+        
+        pokemon.downloadPokemonDetail {
+            //Whatever you write here will only be called after the network call is complete
+            self.updateUI()
+           
+        }
+     
+    }
+    
+    func updateUI() {
+        attackLbl.text = pokemon.attack
+        defenceLbl.text = pokemon.defense
+        heightLbl.text = pokemon.height
+        weightLbl.text = pokemon.weignt
+        typeLbl.text = pokemon.type
+        descriptionLbl.text = pokemon.description
+        
+        if pokemon.nextEvoID == "" {
+            evoLbl.text = "No Evolutions"
+            nextEvoImg.isHidden = true
+        } else {
+        nextEvoImg.isHidden = false
+        nextEvoImg.image = UIImage(named: "\(pokemon.nextEvoID)")
+        evoLbl.text = "Next Evolution: \(pokemon.nextEvoLvl) \(pokemon.nextEvoName)"
+            
+        }
+        
+    }
+    
+    func setBaseParametrs() {
+        nameLbl.text = pokemon.name
+        let image = UIImage(named: "\(pokemon.pokemId)")
+        mainImage.image = image
+        currentEvoImg.image = image
+        iDLbl.text = ("\(pokemon.pokemId)")
 
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

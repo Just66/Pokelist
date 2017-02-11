@@ -52,7 +52,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             let csv = try CSV(contentsOfURL: path)
             let rows = csv.rows
-            print(rows)
+            //print(rows)
             
             for row in rows {
                 let pokeId = Int(row["id"]!)
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func musicBtn(_ sender: UIButton) {
         if musicPlayer.isPlaying {
             musicPlayer.pause()
-            sender.alpha = 0.2
+            sender.alpha = 0.7
         } else {
             musicPlayer.play()
             sender.alpha = 1.0
@@ -144,7 +144,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             let lower = searchBar.text!.lowercased()
             
-            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil}) //we take the original pokemon list then filter it weather search bar text is inluded into the range and $0 is just the placeholder
+            filteredPokemon = pokemon.filter({$0.name.range(of: lower) != nil}) //we take the original pokemon list then filter it weather search bar text is included into the range and $0 is just the placeholder
             collectionView.reloadData()
         }
     }
