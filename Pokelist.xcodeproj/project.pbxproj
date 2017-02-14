@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		21F4E798F2BF6F1D07792D80 /* Pods_Pokelist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE824739E13AEF953EC093CB /* Pods_Pokelist.framework */; };
 		E6270FEB1E48D84E00F30415 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6270FEA1E48D84E00F30415 /* csv.swift */; };
+		E627572B1E535A200066A2DA /* MovesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627572A1E535A200066A2DA /* MovesVC.swift */; };
+		E627572D1E536BAF0066A2DA /* MovesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627572C1E536BAF0066A2DA /* MovesCell.swift */; };
 		E627E87D1E4A0DAB00564F9C /* Pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E627E87C1E4A0DAB00564F9C /* Pokemon.ttf */; };
 		E627E8821E4A7D9800564F9C /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E627E8811E4A7D9800564F9C /* music.mp3 */; };
 		E627E8841E4B5BFB00564F9C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627E8831E4B5BFB00564F9C /* DetailViewController.swift */; };
@@ -28,6 +30,8 @@
 		C5E12EDA536F3D088C158655 /* Pods-Pokelist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokelist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pokelist/Pods-Pokelist.release.xcconfig"; sourceTree = "<group>"; };
 		CE824739E13AEF953EC093CB /* Pods_Pokelist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokelist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6270FEA1E48D84E00F30415 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		E627572A1E535A200066A2DA /* MovesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesVC.swift; sourceTree = "<group>"; };
+		E627572C1E536BAF0066A2DA /* MovesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovesCell.swift; sourceTree = "<group>"; };
 		E627E87C1E4A0DAB00564F9C /* Pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pokemon.ttf; sourceTree = "<group>"; };
 		E627E8811E4A7D9800564F9C /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = Assets.xcassets/music.dataset/music.mp3; sourceTree = "<group>"; };
 		E627E8831E4B5BFB00564F9C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			children = (
 				E627E8831E4B5BFB00564F9C /* DetailViewController.swift */,
 				E62BADB11E46064700706EA0 /* ViewController.swift */,
+				E627572A1E535A200066A2DA /* MovesVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 		E627E87F1E4A0DFC00564F9C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E62BADB61E46064700706EA0 /* Assets.xcassets */,
 				E627E8811E4A7D9800564F9C /* music.mp3 */,
 				E627E87C1E4A0DAB00564F9C /* Pokemon.ttf */,
 				E62BADC11E460BAD00706EA0 /* pokemon.csv */,
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				E6280DA31E479771002F3D3D /* PokeCell.swift */,
+				E627572C1E536BAF0066A2DA /* MovesCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -135,7 +142,6 @@
 				E627E87E1E4A0DCD00564F9C /* Controller */,
 				E62BADAF1E46064700706EA0 /* AppDelegate.swift */,
 				E62BADB31E46064700706EA0 /* Main.storyboard */,
-				E62BADB61E46064700706EA0 /* Assets.xcassets */,
 				E627E8801E4A0E2100564F9C /* Util */,
 				E627E87F1E4A0DFC00564F9C /* Resources */,
 				E62BADB81E46064700706EA0 /* LaunchScreen.storyboard */,
@@ -283,9 +289,11 @@
 				E6280DA41E479771002F3D3D /* PokeCell.swift in Sources */,
 				E62BADB21E46064700706EA0 /* ViewController.swift in Sources */,
 				E62BADB01E46064700706EA0 /* AppDelegate.swift in Sources */,
+				E627572B1E535A200066A2DA /* MovesVC.swift in Sources */,
 				E627E8841E4B5BFB00564F9C /* DetailViewController.swift in Sources */,
 				E627E8861E4D19A700564F9C /* Constants.swift in Sources */,
 				E62BADC71E460DA200706EA0 /* Pokemon.swift in Sources */,
+				E627572D1E536BAF0066A2DA /* MovesCell.swift in Sources */,
 				E6270FEB1E48D84E00F30415 /* csv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

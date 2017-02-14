@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     
     var  pokemon: Pokemon!
 
+    
+    @IBOutlet weak var segmentContoller: UISegmentedControl!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var descriptionLbl: UILabel!
@@ -26,17 +28,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var evoLbl: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setBaseParametrs()
-        
-        pokemon.downloadPokemonDetail {
-            //Whatever you write here will only be called after the network call is complete
-            self.updateUI()
-           
-        }
-     
+//        setBaseParametrs()
+//        pokemon.downloadPokemonDetail {
+//            //Whatever you write here will only be called after the network call is complete
+//            self.updateUI()
+//        }
+     switchViews()
     }
     
     func updateUI() {
@@ -53,7 +54,7 @@ class DetailViewController: UIViewController {
         } else {
         nextEvoImg.isHidden = false
         nextEvoImg.image = UIImage(named: "\(pokemon.nextEvoID)")
-        evoLbl.text = "Next Evolution: \(pokemon.nextEvoLvl) \(pokemon.nextEvoName)"
+        evoLbl.text = "Next Evolution: \(pokemon.nextEvoLvl) Lvl \(pokemon.nextEvoName)"
             
         }
         
@@ -72,5 +73,41 @@ class DetailViewController: UIViewController {
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func switchViews() {
+        switch segmentContoller.selectedSegmentIndex {
+            case 0:
+                setBaseParametrs()
+                pokemon.downloadPokemonDetail {
+                    //Whatever you write here will only be called after the network call is complete
+                    self.updateUI()
+                }
 
+                print("first view")
+            case 1:
+                var poke: Pokemon!
+                performSegue(withIdentifier: "moves", sender: poke)
+                print("hello")
+            default:
+                break
+            }
+        }
+
+
+    @IBAction func segmentChange(_ sender: Any) {
+        switchViews()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moves" {
+            if let movesVC = segue.destination as? MovesVC {
+                if let poke = sender as? Pokemon {
+                    movesVC.pokemon = poke
+                }
+            }
+        }
+    }
+
+    
 }
