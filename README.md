@@ -2,11 +2,14 @@
 Great app for pokemons lovers
 
 ## Libraries
-Alamofire
+[Alamofire] (https://github.com/Alamofire/Alamofire)
 
- ## PokemonAPI
+### API
+ 
+[PokeAPI] (https://pokeapi.co)
+ 
 
-<img src="https://pp.vk.me/c836332/v836332296/21ebe/gTq1ZC3Y9aU.jpg" alt="alt text" style="width:150;height:280">
 
+![Screenshot] (https://pp.vk.me/c836332/v836332296/21ebe/gTq1ZC3Y9aU.jpg)
 
 <img src="https://pp.vk.me/c836332/v836332296/21ed2/YuhbekGwdn4.jpg" alt="alt text" style="width:208;height:315">
